@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', _ => {
   editor.setValue(config.get('custom_css') || (CONFIG_DEFAULT.custom_css + '\n'))
   editor.gotoLine(1)
 
-  setTimeout(_ => window.locale.localizeAll(), 250)
+  setTimeout(_ => window.locale.localizeAll(), 500)
 })
     </script>
   </head>
@@ -253,7 +253,21 @@ document.addEventListener('DOMContentLoaded', _ => {
               <input type="range" id="input-style-gauge-height"
                      data-config-key="style.gauge-height"
                      data-unit="%"
-                     from="0" step="5" to="100"/>
+                     min="0" step="5" max="100"/>
+            </span>
+          </p>
+          <p class="control">
+            <label for="input-style-graph-height"
+                   data-locale="config.style.graph-height">
+              테이블 줄 높이
+            </label>
+            <span class="input-group">
+              <label class="input-value" for="input-style-graph-height">
+              </label>
+              <input type="range" id="input-style-graph-height"
+                     data-config-key="style.graph-height"
+                     data-unit="rem"
+                     min="1" step="0.25" max="2.5"/>
             </span>
           </p>
           <p class="control">
@@ -264,6 +278,15 @@ document.addEventListener('DOMContentLoaded', _ => {
             <input type="text" id="input-style-body-font"
                    data-config-key="style.body-font"
                    style="flex-grow: 50;"/>
+          </p>
+          <p class="control">
+            <label for="input-format-use_short_name"
+                   data-locale="config.format.use_short_name">
+              이름을 이니셜로 표시 (글로벌 서버용)
+            </label>
+            <input type="checkbox" id="input-format-use_short_name"
+                   data-type="boolean"
+                   data-config-key="format.use_short_name" />
           </p>
         </article>
         <article>
@@ -1148,6 +1171,7 @@ document.addEventListener('DOMContentLoaded', _ => {
             지원 / 문제 해결
           </h3>
           <p> @hibiyasleep </p>
+          <p> u/hibiya_ </p>
           <p> https://github.com/hibiyasleep/kagerou </p>
         </article>
         <article>

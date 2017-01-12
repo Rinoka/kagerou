@@ -48,8 +48,13 @@
 
       if(!current) {
         dom.innerHTML = `<li>
-          아직 데이터가 없습니다.
-          <br/>전투를 진행 후 다시 확인해주세요.
+          <span data-locale="ui.header.no-data-yet">
+            ${window.l.get('ui.header.no-data-yet')}
+          </span>
+          <br/>
+          <span data-locale="ui.header.please-do-combat">
+            ${window.l.get('ui.header.please-do-combat')}
+          </span>
         </li>`
         return
       }
@@ -245,6 +250,8 @@
         setFooterVisibility()
 
         window.renderer = new Renderer(window.config.get())
+        if(!window.tabdisplay)
+          window.tabdisplay = new TabDisplay()
         window.tabdisplay.render()
 
         loadFormatButtons()

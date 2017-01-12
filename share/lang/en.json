@@ -1,7 +1,7 @@
 {
   "ui": {
     "header": {
-      "in-develop": "Develop version",
+      "in-develop": "Develop/Unstable",
       "waiting-data": "Awaiting combatant",
       "no-data-yet": "No data yet.",
       "please-do-combat": "Check after doing some combatant."
@@ -177,7 +177,8 @@
         "hps": "HPS",
         "accuracy": "Failure (Miss / Swing)"
       },
-      "myname": "My name"
+      "myname": "My name",
+      "use_short_name": "Initialize username (as like K. Hibiya)"
     }
   },
   "col": {

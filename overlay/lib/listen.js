@@ -122,6 +122,8 @@
     }
 
     push(data) {
+      if(!data || !data.Encounter) return
+
       if(this.isNewEncounter(data.Encounter)) {
         if(config.get('format.myname').length === 0
         && NICK_REGEX.test(data.Encounter.title)) {
@@ -149,8 +151,10 @@
         this.currentData.update(data)
       }
 
-      window.ui && window.ui.update()
-      window.renderer.update()
+      if(!window.renderer && window.l.loaded) {
+        window.renderer = new Renderer(window.config.get())
+      }
+      window.renderer && window.renderer.update()
     }
 
     updateLastEncounter(encounter) {
