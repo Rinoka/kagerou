@@ -1,20 +1,20 @@
 {
   "ui": {
     "header": {
-      "in-develop": "Develop/Unstable",
-      "waiting-data": "Awaiting combatant",
+      "in-develop": "development build (unstable)",
+      "waiting-data": "Awaiting combatants...",
       "no-data-yet": "No data yet.",
-      "please-do-combat": "Check after doing some combatant."
+      "please-do-combat": "Check back after an encounter."
     },
     "menu": {
-      "merge-pet-on": "Turn on pet-merging",
-      "merge-pet-off": "Turn off pet-merging",
-      "nameblur-on": "Blur name",
-      "nameblur-off": "Unblur name",
-      "end-encounter": "Split encounter",
+      "merge-pet-on": "Enable pet-merging.",
+      "merge-pet-off": "Disable pet-merging.",
+      "nameblur-on": "Blur names.",
+      "nameblur-off": "Unblur names.",
+      "end-encounter": "Split encounters",
       "settings": "Settings",
-      "reload": "Reload overlay",
-      "screenshot": "Take screenshot"
+      "reload": "Reload overlay.",
+      "screenshot": "Take a screenshot."
     },
     "config": {
       "_": "Settings",
@@ -22,40 +22,40 @@
       "execute": "Execute",
       "dialog": {
         "really": "Really reset these settings?",
-        "undone": "there's no undo!",
+        "undone": "This cannot be undone!",
         "yes": "Yes",
         "no": "No"
       },
       "general": {
         "_": "General",
-        "combine_pet": "Pet merging",
+        "combine_pet": "Pet Merging",
         "split-by-comma": "Divide multiple names by ','",
         "layout": "Layout",
-        "margin-alert": "If this set to less than 2, shadow may not display properly.",
+        "margin-alert": "If the margin is set to less than 2, shadows may not display properly.",
         "footer": {
-          "_": "Footer elements",
-          "rank": "Current rank",
-          "rdps": "RDPS",
-          "rhps": "RHPS",
-          "recover": "Total Taken Heals / Taken Damages 🔄"
+          "_": "Footer Elements",
+          "rank": "Current Rank",
+          "rdps": "R.DPS",
+          "rhps": "R.HPS",
+          "recover": "Total Healing Recieved / Damage Recieved 🔄"
         },
         "reset": "Reset",
         "reset-this": "Reset All"
       },
       "style": {
         "_": "Style",
-        "reset-this": "Reset style",
+        "reset-this": "Reset Style",
         "css-help": [
-          "Use CSS values. Can be extended with other attributes with semicolon.",
-          "Use semi-transparent color with <code>rgba(Red, Green, Blue, Alpha)</code>. <br /> Alpha is 0 to 1.",
-          "Use image background with <code>url('URL here')</code>"
+          "All fields take CSS values. You can extend and modify other attributes with a semicolon.",
+          "To use semi-transparent colors, use <code>rgba(Red, Green, Blue, Alpha)</code>. <br /> Alpha is 0 to 1.",
+          "To make a background an image, link it using <code>url('URL here')</code>."
         ],
         "background": "Background",
         "foreground": "Foreground",
         "element": {
           "nav": "Navbar",
-          "dropdown": "Dropdown menu",
-          "header": "Table header",
+          "dropdown": "Dropdown Menu",
+          "header": "Table Header",
           "table": "Table"
         },
         "shadow": "Shadow"
@@ -64,7 +64,7 @@
         "_": "Gauge Colors",
         "reset-this": "Reset Colors",
         "position": "Position Helpers",
-        "position-none": "Set 'none' to remove.",
+        "position-none": "Set these to 'none' to remove them.",
         "etc": "Etc",
         "pet-buddy": "Pet/Buddy"
       },
@@ -72,29 +72,29 @@
         "_": "Column Width",
         "reset-this": "Reset Widths",
         "css-help": [
-          "Unit is default 16px, and changed by UI scale.",
+          "One unit is by default equivalent to 16px, and is changed by the UI scale.",
           "The 'Name' column is the first to decrease when the window width decreases."
         ]
       },
       "tab": {
         "_": "Tab",
-        "title": "Title",
-        "sortby": "Sort by",
-        "gaugeby": "Gauge by",
-        "available": "Available columns",
-        "configured": "Configured columns"
+        "title": "Title:",
+        "sortby": "Sort By:",
+        "gaugeby": "Measure Gauge By:",
+        "available": "Available Columns",
+        "configured": "Configured Columns"
       },
       "i/e": {
         "_": "Import/Export",
         "import": "Import",
         "export": "Export",
-        "copy-this": "Copy all of the value below:",
-        "paste-here": "Paste the fetched value below:",
-        "save-first": "Save First!!",
-        "export-help": "The value of 'General &gt; Layout' is included in 'Style' and some values are excluded. <br /> Values that are the same as the default are not exported.",
-        "config-to-export": "Config to export",
+        "copy-this": "Copy the generated code below:",
+        "paste-here": "Paste the given code below:",
+        "save-first": "Save First!",
+        "export-help": "'Style' includes data from 'General > Layout', but some values are excluded. <br /> Values that are the same as the default will not be exported.",
+        "config-to-export": "Data to Export:",
         "all": "All",
-        "name-first": "Please set \"General &gt; My name\" first!"
+        "name-first": "Please be sure to set \"General &gt; My Name\" first!"
       },
       "etc": {
         "_": "More",
@@ -102,12 +102,12 @@
           "_": "Filter",
           "general": "General",
           "help": [
-            "FFXIV_Plugin does not identify friends or foe, so that this option will try not to display enemies in anyway.",
-            "If something wrong, try disable all of option below."
+            "FFXIV_Plugin does not identify friend or foe, so these options try to exclude foes.",
+            "If something is wrong, try disable all of option below."
           ],
-          "unusual-spaces": "Name contains space, but not a pet (Korea Server Only)",
-          "jobless": "Class/Job is empty",
-          "not-combatant": "Not a combat class/job"
+          "unusual-spaces": "Name contains a space, but is not a pet. (KR Server Only)",
+          "jobless": "Class/Job is Empty",
+          "not-combatant": "Not a Combat Class/Job"
         },
         "css": "CSS"
       },
@@ -133,19 +133,19 @@
   "config": {
     "style": {
       "_": "Style",
-      "resize-factor": "UI scale",
-      "body-margin": "Margin between header and content",
-      "body-font": "Font family",
-      "nav-opacity": "Navbar opacity when inactive",
+      "resize-factor": "UI Scale",
+      "body-margin": "Margin Between Header and Content",
+      "body-font": "Font Family",
+      "nav-opacity": "Navbar Opacity when Inactive",
       "accent-color": "Accent",
       "shadow-card": "Window",
       "shadow-text": "Text",
-      "font-size-small": "'Small' fontsize",
-      "gauge-height": "Gauge height",
-      "graph-height": "Table line height"
+      "font-size-small": "'Small' Fontsize",
+      "gauge-height": "Gauge Height",
+      "graph-height": "Table Line Height"
     },
     "color": {
-      "_": "Guage Color",
+      "_": "Gauge Color",
       "gauge-default": "Default",
       "gauge-opacity": "Opacity",
       "position-tank": "Tank",
@@ -164,21 +164,21 @@
       "whm": "White Mage (Conjurer)",
       "sch": "Scholar",
       "ast": "Astrologian",
-      "smn-pet": "Summoner (Arcanist) Carbuncle/Egi",
-      "sch-pet": "Scholar Egi",
+      "smn-pet": "Summoner Egi (Arcanist Carbuncle)",
+      "sch-pet": "Scholar Fairy",
       "mch-pet": "Machinist Turret",
       "chocobo": "Chocobo",
       "limit-break": "Limit Break"
     },
     "format": {
       "significant_digit": {
-        "_": "Decimal accuracy",
+        "_": "Decimal Accuracy",
         "dps": "DPS",
         "hps": "HPS",
-        "accuracy": "Failure (Miss / Swing)"
+        "accuracy": "Accuracy / Missed"
       },
-      "myname": "My name",
-      "use_short_name": "Initialize username (as like K. Hibiya)"
+      "myname": "My Name",
+      "use_short_name": "Use Initial for First Name (as K. Hibiya)"
     }
   },
   "col": {
@@ -188,20 +188,20 @@
         "<img src=\"../share/img/class/empty.png\" class=\"clsicon\"/>",
         "Class Icon"
       ],
-      "class": ["Cls", "Class/Job"],
+      "class": ["Job", "Class/Job"],
       "owner": ["Owner", "Owner"],
       "name": ["Name", "Name"]
     },
     "deal": {
       "_": "DPS",
       "per_second": ["DPS", "per Second"],
-      "pct": ["D%", "Deal %"],
-      "total": ["D.Tot", "Total"],
-      "failure": ["Fail", "Failure (Miss / Swing)"],
-      "accuracy": ["Acc.", "Accuracy (1 - Miss / Swing)"],
-      "swing": ["Swing", "Swings"],
+      "pct": ["D.%", "Overall DPS %"],
+      "total": ["T.DPS", "Total"],
+      "failure": ["Miss.%", "Missed %"],
+      "accuracy": ["Acc", "Accuracy %"],
+      "swing": ["Swings", "Swings"],
       "miss": ["Miss", "Misses"],
-      "hitfail": ["HitF", "Hitfail"],
+      "hitfail": ["H.fail", "Hitfail"],
       "critical": ["Crit", "Critical%"],
       "max": ["MaxD", "Maxhit (w/o skillname)"],
       "maxhit": ["Max Damage", "Maxhit (w/ skillname)"],
@@ -212,8 +212,8 @@
     },
     "tank": {
       "_": "Tank",
-      "damage": ["TakenD", "Damage taken"],
-      "heal": ["TakenH", "Heal taken"],
+      "damage": ["Taken.D", "Damage Taken"],
+      "heal": ["Taken.H", "Heals Recieved"],
       "parry": ["Parry", "Parry"],
       "block": ["Block", "Block"]
     },
@@ -222,18 +222,18 @@
       "per_second": ["HPS", "per Second"],
       "pct": ["H%", "Heal %"],
       "total": ["H.Tot", "Total"],
-      "over": ["OvrH", "Overheal"],
+      "over": ["OvH", "Overheal"],
       "swing": ["Swing", "Swings"],
-      "critical": ["HCrit", "Critical%"],
-      "cure": ["Cure", "Cures"],
-      "max": ["MaxH", "Maxhit (w/o skillname)"],
+      "critical": ["H.Crit", "Critical%"],
+      "cure": ["H.Casts", "Healing Casts"],
+      "max": ["Max.H", "Maxhit (w/o skillname)"],
       "maxhit": ["Max Heal", "Maxhit (w/ skillname)"]
     },
     "etc": {
       "_": "Etc",
-      "powerdrain": ["PDrn", "Powerdrain"],
-      "powerheal": ["PHeal", "Powerheal"],
-      "death": ["Dead", "Deathcount"]
+      "powerdrain": ["P.Drn", "Powerdrain"],
+      "powerheal": ["P.Heal", "Powerheal"],
+      "death": ["Deaths", "Deathcount"]
     }
   },
   "zone": {
